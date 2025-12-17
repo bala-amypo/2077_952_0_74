@@ -7,7 +7,7 @@ import java.time.*;
 
 public class Student{
     @Id
-    @GeneratedValue(Strategy=GenerationType)
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
     private String name;
     private String dept;
