@@ -1,13 +1,12 @@
 package com.example.demo.entity;
 
 import java.time.*;
+
 import jakarta.persistence.*;
 @Entity
-
-
 public class Student{
-    @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @Id //PRIMARY ID DECLARE PANNA
+    @GeneratedValue(strategy=GenerationType.IDENTITY) //TO AUTO GENERATE THE PRIMARY KEY
     private Long id;
     private String name;
     private String dept;
@@ -51,13 +50,6 @@ public class Student{
         this.cgpa = cgpa;
     }
     public Student() {
-    }
-    public Student(Long id,String name,String dept,LocalDate dob,float cgpa){
-        this.id=id;
-        this.name=name;
-        this.dept=dept;
-        this.dob=dob;
-        this.cgpa=cgpa;
     }
     
 }
