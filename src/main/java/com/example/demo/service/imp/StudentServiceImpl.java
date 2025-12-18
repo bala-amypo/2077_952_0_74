@@ -30,7 +30,7 @@ public class StudentServiceImpl implements StudentService {
             return "Student Updated Successfully";
         }
         else{
-            return "Student with ID "+id+" not found;
+            return "Student with ID "+id+" not found";
         }
     }
 }
