@@ -30,5 +30,5 @@ public class StudentController {
     }
     @DeleteMapping("/delete/{id}")
     public String delete(@PathVariable Long ){
-        return stdser.DeleteData()
+        return stdser.DeleteData(id);
 }
