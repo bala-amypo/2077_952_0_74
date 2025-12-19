@@ -6,12 +6,14 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 @RestControllerAdvice
 public class GlobalExceptionHandler {
-@ExceptionHandler(MethodArgumentNotValidException.class)
-public ResponseEntity <? > hello(MethodArgumentNotValidException ex) {
-Map<String, String> map=new HashMap<>();
-}
-@ExceptionHandler(PasswordhotwatchCri.class)
-public String hi(){
-return "Hi";
+    @ExceptionHandler(MethodArgumentNotValidException.class)
+    public ResponseEntity <?> hello(MethodArgumentNotValidException ex) {
+        Map<String, String> map=new HashMap<>();
+        ex.getBlindingResult().getFieldError().
+    }
+    @ExceptionHandler(PasswordhotwatchCri.class)
+    public String hi(){
+        return "Hi";
            
+}
 }
