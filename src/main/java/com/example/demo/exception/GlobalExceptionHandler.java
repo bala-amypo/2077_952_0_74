@@ -9,7 +9,8 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity <?> hello(MethodArgumentNotValidException ex) {
         Map<String, String> map=new HashMap<>();
-        ex.getBlindingResult().getFieldError().forEach(error -> map.put(error.getField(),error.getDefaultMessage()))
+        ex.getBlindingResult().getFieldError().forEach(error -> map.put(error.getField(),error.getDefaultMessage()));
+        return new ResponseEntity<>(map,HttpStatus.Bad_REQUEST);
     }
     @ExceptionHandler(PasswordhotwatchCri.class)
     public String hi(){
